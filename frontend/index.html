@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cửa hàng | STOCKROOM</title>
+  <meta name="description" content="STOCKROOM — Cửa hàng trực tuyến cao cấp. Khám phá điện tử, thời trang, đồ gia dụng và nhiều hơn nữa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main class="container">
+    <div class="catalog-header">
+      <h1>Khám Phá Sản Phẩm Cao Cấp</h1>
+      <select id="category-filter">
+        <option value="">Tất cả danh mục</option>
+      </select>
+    </div>
+
+    <div id="product-grid" class="product-grid">
+      <p class="muted">Đang tải danh mục sản phẩm&hellip;</p>
+    </div>
+    <div id="pagination" class="pagination"></div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/page-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quản trị &middot; Đơn hàng | STOCKROOM</title>
+  <meta name="description" content="Quản lý đơn hàng — STOCKROOM">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <main class="container">
+    <div id="orders-list-view">
+      <h1>Quản lý Đơn hàng</h1>
+
+      <div class="toolbar">
+        <select id="status-filter">
+          <option value="">Tất cả trạng thái</option>
+          <option value="PENDING">Chờ xử lý</option>
+          <option value="CONFIRMED">Đã xác nhận</option>
+          <option value="SHIPPING">Đang giao</option>
+          <option value="DELIVERED">Đã giao</option>
+          <option value="CANCELLED">Đã huỷ</option>
+        </select>
+      </div>
+
+      <table>
+        <thead><tr><th>Đơn hàng (nhấn xem)</th><th>Khách hàng</th><th>Ngày đặt</th><th>Tổng tiền</th><th>Trạng thái</th><th>Hành động</th></tr></thead>
+        <tbody id="orders-tbody">
+          <tr><td colspan="6" class="muted">Đang tải&hellip;</td></tr>
+        </tbody>
+      </table>
+      <div id="pagination" class="pagination"></div>
+    </div>
+
+    <!-- Order Details View -->
+    <div id="order-details-view" class="form-card" style="display: none; margin-bottom: 32px;">
+      <div style="margin-bottom: 20px;">
+        <button type="button" class="secondary" id="back-to-orders-btn" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Quay lại danh sách
+        </button>
+      </div>
+      <h2 style="margin-top: 0; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 20px;">Chi tiết đơn hàng <span id="modal-order-id"></span></h2>
+      <div id="order-details-content" style="display: flex; flex-direction: column; gap: 16px;">
+        <!-- Dynamic details go here -->
+      </div>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/admin-orders.js"></script>
+</body>
+</html>
